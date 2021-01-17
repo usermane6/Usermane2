@@ -270,7 +270,7 @@ upgradeGtrBtn.addEventListener("click", upgradeGather);
 rockRefineBtn.addEventListener("click", rockRefine);
 goldSellerBtn.addEventListener("click", sellGold);
 grassGatherer.addEventListener("click", buyAutoGrass);
-rockGatherer.addtEventListener("click", buyAutoRock);
+rockGatherer.addEventListener("click", buyAutoRock);
 dissectGrsBtn.addEventListener("click", dissectGrass);
 upgradeRfnBtn.addEventListener("click", upgradeRefine);
 
