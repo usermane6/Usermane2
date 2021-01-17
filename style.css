@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(192, 192, 192);
+    border: rgb(192, 192, 192);
+}
+
+html {
+    height: 1000px;
+}
+
+body {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-repeat: no-repeat;
+
+    background-color: rgb(26, 25, 25);
+}
+
+div {
+    margin-top: 15px;
+    text-align: left; 
+}
+
+button {
+    margin-top: 20px;
+    padding: 20px 25px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.column {
+    float: left;
+    height: 300px;  
+}
+  
+.left {
+    width: 25%;
+}
+  
+.right {
+    width: 75%;
+}
+
+.hidden {
+    display: none;
+}
+
+.grass {
+    color: green;
+}
+
+.rocks {
+    color: rgb(107, 107, 107);
+}
+
+.gold {
+    color: rgb(201, 201, 25)
+}

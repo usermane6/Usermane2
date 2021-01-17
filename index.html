@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="column left">
+        <h2 id="grass-amounts">grass: 0</h2>
+        <h2 id="rock-amounts" class="hidden">rocks: 0</h2>
+        <h2 id="gold-amounts" class="hidden"> gold: 0</h2>
+        <h2 id="money-amounts" class="hidden">money: 0</h2>
+        <h2 id="clippings-amounts" class="hidden">clippings: 0</h2>
+        <h2 id="seeds-amounts" class="hidden">seeds: 0</h2>
+        <h2 id="iron-amounts" class="hidden">iron: 0</h2>
+    </div> 
+    <div class="column right">
+        <button id="gather-btn">gather</button>
+        <button id="rock-refine-btn" class="hidden">refine rock</button>
+        <button id="gold-seller" class="hidden">gold markets</button>
+        <button id="dissect-grass-btn" class="hidden">dissect grass</button>
+        <div>
+            <button id="gather-upgrade-btn" class="hidden">gather better: 50 grass</button>
+            <button id="refine-upgrade-btn" class="hidden">refine better: 50 gold</button>
+        </div>
+        <div>
+            <button id="buy-grass-gatherer-btn" class="hidden">hire grass gatherer: 15 money</button>
+            <button id="buy-rock-gatherer-btn" class="hidden">hire rock gatherer: 50 money</button>
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
