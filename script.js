@@ -21,7 +21,7 @@ const rockGatherer = document.querySelector("#buy-rock-gatherer-btn");
 
 
 // game variables
-let grass = 1006550;
+let grass = 0;
 let rocks = 0;
 let gold = 0;
 let money = 0;
