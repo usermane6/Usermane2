@@ -21,7 +21,7 @@ const rockGatherer = document.querySelector("#buy-rock-gatherer-btn");
 
 
 // game variables
-let grass = 1000000;
+let grass = 1006550;
 let rocks = 0;
 let gold = 0;
 let money = 0;
@@ -270,7 +270,7 @@ upgradeGtrBtn.addEventListener("click", upgradeGather);
 rockRefineBtn.addEventListener("click", rockRefine);
 goldSellerBtn.addEventListener("click", sellGold);
 grassGatherer.addEventListener("click", buyAutoGrass);
-rockGatherer.addEventListener("click", buyAutoRock);
+rockGatherer.addtEventListener("click", buyAutoRock);
 dissectGrsBtn.addEventListener("click", dissectGrass);
 upgradeRfnBtn.addEventListener("click", upgradeRefine);
 
