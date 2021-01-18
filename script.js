@@ -46,7 +46,7 @@ let rocksGtrAmt = 1;
 let grassGathererAmt = 0;
 let rockGathererAmt = 0;
 
-let time = 10000;
+let time = 5000;
 
 //functions
 //function for what happens when the gather button is pushed
@@ -127,7 +127,7 @@ function upgradeGather() {
     // level six increase
     // general upgrade
     } else if (gatherUpgradeLvl == 6) {
-        if (grass >= 1250 && rock >= 500) {
+        if (grass >= 1250 && rocks >= 500) {
             grass -= 1250;
             rocks -= 500;
             grassGtrAmt += 2;
@@ -156,8 +156,15 @@ function upgradeGather() {
             rocksGtrAmt ++;
             grassAmounts.innerHTML = `grass: ${grass}`;
             rocksAmounts.innerHTML = `rocks: ${rocks}`;
-            upgradeGtrBtn.innerHTML = `gather better: 3250 grass 1200 rock`;
+            upgradeGtrBtn.innerHTML = `gather better: 1200 rock`;
         }
+    } else if (gatherUpgradeLvl == 9 && rocks >= 1200) {
+        rocks -= 1200;
+        rocksGtrAmt ++;
+        upgradeRfnBtn.classlist.remove("hidden");
+        ironAmounts.classlist.remove("hidden");
+        rocksAmounts.innerHTML = `rocks: ${rocks}`;
+        upgradeGtrBtn.innerHTML = `gather better: 3000 grass 1500 rock`;
     }
 }
 
@@ -277,8 +284,6 @@ upgradeRfnBtn.addEventListener("click", upgradeRefine);
 // time loop
 setInterval(allAutos, time);
 setInterval();
-
-
 
 
 
