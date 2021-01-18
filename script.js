@@ -1,4 +1,4 @@
-//boring
+//boring lolololololol
 //amounts of things
 //BRONION = Swiggity Swoogity
 const grassAmounts = document.querySelector("#grass-amounts");
@@ -324,7 +324,7 @@ upgradeRfnBtn.addEventListener("click", upgradeRefine);
 
 // time loop
 setInterval(allAutos, time);
-setInterval();
+setInterval(goldPriceChange, time);
 
 
 
