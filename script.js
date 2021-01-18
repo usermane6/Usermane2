@@ -25,8 +25,8 @@ const goldMarketTooltip = document.querySelector('#gold-market-tooltip');
 
 
 // game variables
-let grass = 0;
-let rocks = 0;
+let grass = 10000;
+let rocks = 10000;
 let gold = 0;
 let money = 0;
 let iron = 0;
@@ -213,7 +213,7 @@ function upgradeRefine() {
 //function for selling gold
 function sellGold() {
     if (gold >= goldPrice) {
-        gold = ((gold * goldPrice) - 100) / goldPrice;
+        gold = (gold * 10 - goldPrice * 10) / 10;
         money += 1;
         goldPrice ++;
         goldAmounts.innerHTML = `gold: ${gold}`;
