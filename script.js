@@ -32,7 +32,7 @@ let grassSeeds = 0;
 let goldPrice = 1;
 
 let autoGrassCost = 15;
-let autoRockCost = 50;
+let autoRockCost = 30;
 
 let gatherRocks = false;
 let refineIron = false;
@@ -155,16 +155,18 @@ function upgradeGather() {
             grassGtrAmt ++;
             rocksGtrAmt ++;
             grassAmounts.innerHTML = `grass: ${grass}`;
-            rocksAmounts.innerHTML = `rocks: ${rocks}`;
+            rockAmounts.innerHTML = `rocks: ${rocks}`;
             upgradeGtrBtn.innerHTML = `gather better: 1200 rock`;
+            gatherUpgradeLvl ++;
         }
     } else if (gatherUpgradeLvl == 9 && rocks >= 1200) {
         rocks -= 1200;
         rocksGtrAmt ++;
         upgradeRfnBtn.classlist.remove("hidden");
         ironAmounts.classlist.remove("hidden");
-        rocksAmounts.innerHTML = `rocks: ${rocks}`;
+        rockAmounts.innerHTML = `rocks: ${rocks}`;
         upgradeGtrBtn.innerHTML = `gather better: 3000 grass 1500 rock`;
+        gatherUpgradeLvl ++;
     }
 }
 
@@ -232,7 +234,7 @@ function dissectGrass() {
 function buyAutoGrass() {
     if (money >= autoGrassCost) {
         money -= autoGrassCost;
-        autoGrassCost = Math.round(autoGrassCost * 1.40);
+        autoGrassCost = Math.round(autoGrassCost * 1.20);
         grassGathererAmt ++;
         grassGatherer.innerHTML = `hire grass gatherer: ${autoGrassCost} money`;
         moneyAmounts.innerHTML = `money: ${money}`;
@@ -242,7 +244,7 @@ function buyAutoGrass() {
 function buyAutoRock() {
     if (money >= autoRockCost){
         money -= autoRockCost;
-        autoRockCost = Math.round(autoRockCost * 1.40);
+        autoRockCost = Math.round(autoRockCost * 1.20);
         rockGathererAmt ++;
         rockGatherer.innerHTML = `hire rock gatherer: ${autoRockCost} money`
         moneyAmounts.innerHTML = `money: ${money}`;
@@ -262,6 +264,14 @@ function autoRockGtr() {
     if (rockGathererAmt >= 1) {
         rocks += rocksGtrAmt * rockGathererAmt;
         rockAmounts.innerHTML = `rocks: ${rocks}`;
+    }
+}
+
+//Function for fluctuating gold price
+function goldPriceChange() {
+    if (gold >= 0) {
+        random = Math.random(Math.random * 101) 
+        
     }
 }
 
