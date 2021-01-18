@@ -20,7 +20,7 @@ const dissectGrsBtn = document.querySelector("#dissect-grass-btn");
 const grassGatherer = document.querySelector("#buy-grass-gatherer-btn");
 const rockGatherer = document.querySelector("#buy-rock-gatherer-btn");
 
-const grassPCTooltip = document.querySelector("#grassPerClickTooltip");
+const grassPCTooltip = document.querySelector("#grass-per-click-tooltip");
 
 
 // game variables
@@ -74,7 +74,6 @@ function upgradeGather() {
             grassGtrAmt ++;
             grass -= 50
             grassAmounts.innerHTML = `grass: ${grass}`;
-            grassPCTooltip.innerHTML = `${grassGtrAmt} grass per click`
             upgradeGtrBtn.innerHTML = `gather better: 100 grass`
             gatherUpgradeLvl ++  
         } 
@@ -235,7 +234,7 @@ function dissectGrass() {
     }
 }
 
-function buyAutoGrass() {
+function buyAutoGrass() { 
     if (money >= autoGrassCost) {
         money -= autoGrassCost;
         autoGrassCost = Math.round(autoGrassCost * 1.20);
