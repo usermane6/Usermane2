@@ -26,7 +26,7 @@ div {
 
 button {
     border-radius: 20px 20px 20px 20px;
-    font-size: 5px;
+    font-size: 20px;
     margin-top: 20px;
     padding: 30px 37px;
     background-color: rgb(58, 58, 58);
@@ -70,13 +70,13 @@ button {
 .tooltip .tooltiptext { /* This is for the tooltip text */
     visibility: hidden;
     background-color: #575757;
-    font-size: 3;
-   color: white;
-   text-align: center;
-   padding: 10px;
-   border-radius: 10px;  /* This defines tooltip text position */
-   position: absolute;
-   z-index: 1;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;  /* This defines tooltip text position */
+    position: absolute;
+    z-index: 1;
 } 
 
 .tooltip:hover .tooltiptext { /* Makes tooltip text visible when text is hovered on */
