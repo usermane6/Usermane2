@@ -70,7 +70,7 @@ button {
 .tooltip .tooltiptext { /* This is for the tooltip text */
     visibility: hidden;
     background-color: #575757;
-    font-size: 2;
+    font-size: 3;
    color: white;
    text-align: center;
    padding: 10px;
