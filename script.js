@@ -182,7 +182,7 @@ function rockRefine() {
         //annoying math
         //going to get annoyinger (Math.random) 
         //(factual)
-        random = Math.round(Math.random * 101)
+        random = Math.round(Math.random() * 101)
         gold = ((gold * 5) + rocks) / 5;
         if (refineIron == true) {
             if (random >= 50) {
@@ -279,7 +279,7 @@ function autoRockGtr() {
 
 //Function for fluctuating gold price
 function goldPriceChange() {
-    var random = Math.round(Math.random * 101);
+    var random = Math.round(Math.random() * 101);
     if (random >= 0 && random < 20) {
         goldPrice -= 1;
     } else if (random >= 20 && random <= 40) {
@@ -309,7 +309,6 @@ function autoGrsFrm () {
 function allAutos () {
     autoGrassGtr()
     autoRockGtr()
-    goldPriceChange() 
 }
 
 // event listener
