@@ -297,7 +297,7 @@ function goldPriceChange() {
         case 16:
             goldPrice --;
     }
-    goldMarketTooltip.innerHTML = `${goldPrice} gold for 1 money`
+    goldMarketTooltip.innerHTML = `${goldPrice} gold for 1 lol`
 }
 
 //Function for Farms
