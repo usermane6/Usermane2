@@ -26,6 +26,7 @@ div {
 
 button {
     border-radius: 20px 20px 20px 20px;
+    font-size: 5px;
     margin-top: 20px;
     padding: 30px 37px;
     background-color: rgb(58, 58, 58);
@@ -68,8 +69,8 @@ button {
 
 .tooltip .tooltiptext { /* This is for the tooltip text */
     visibility: hidden;
-    width: ;
     background-color: #575757;
+    font-size: 2;
    color: white;
    text-align: center;
    padding: 10px;

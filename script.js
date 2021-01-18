@@ -21,6 +21,7 @@ const grassGatherer = document.querySelector("#buy-grass-gatherer-btn");
 const rockGatherer = document.querySelector("#buy-rock-gatherer-btn");
 
 const grassPCTooltip = document.querySelector("#grass-per-click-tooltip");
+const goldMarketTooltip = document.querySelector('#gold-market-tooltip');
 
 
 // game variables
@@ -32,7 +33,7 @@ let iron = 0;
 let clippings = 0;
 let grassSeeds = 0;
 
-let goldPrice = 1;
+let goldPrice = 10;
 
 let autoGrassCost = 15;
 let autoRockCost = 30;
@@ -175,6 +176,7 @@ function upgradeGather() {
 
 //Refining Rocks to Gold
 function rockRefine() {
+    var random
     //Check Amount
     if (rocks >= 1) {
         //annoying math
@@ -210,11 +212,13 @@ function upgradeRefine() {
 
 //function for selling gold
 function sellGold() {
-    if (gold >= 10) {
-        gold = ((gold * 10) - 100) / 10;
+    if (gold >= goldPrice) {
+        gold = ((gold * goldPrice) - 100) / goldPrice;
         money += 1;
+        goldPrice ++;
         goldAmounts.innerHTML = `gold: ${gold}`;
         moneyAmounts.innerHTML = `money: ${money}`;
+        goldMarketTooltip.inner = `${goldPrice} gold for 1 money`
         moneyAmounts.classList.remove("hidden");
         grassGatherer.classList.remove("hidden");
         rockGatherer.classList.remove("hidden");
@@ -272,16 +276,37 @@ function autoRockGtr() {
 
 //Function for fluctuating gold price
 function goldPriceChange() {
-    if (gold >= 0) {
-        random = Math.random(Math.random * 101) 
-        
+    var random = Math.round(Math.random * 101);
+    if (random >= 0 && random < 20) {
+        goldPrice -= 1;
+    } else if (random >= 20 && random <= 40) {
+        goldPrice += 1;
+    } else if (random > 40 && random <= 50) {
+        goldPrice -= 2
     }
+    switch (goldPrice) {
+        case 4:
+            goldPrice ++;
+            break;
+        case 3: 
+            goldPrice = 5;
+            break;
+        case 16:
+            goldPrice --;
+    }
+    goldMarketTooltip.inner = `${goldPrice} gold for 1 money`
+}
+
+//Function for Farms
+function autoGrsFrm () {
+    
 }
 
 //runs all automatic functions
 function allAutos () {
     autoGrassGtr()
     autoRockGtr()
+    goldPriceChange() 
 }
 
 // event listener
