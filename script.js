@@ -216,6 +216,9 @@ function sellGold() {
         gold = (gold * 10 - goldPrice * 10) / 10;
         money += 1;
         goldPrice ++;
+        if (goldPrice == 16) {
+            goldPrice -= 1;
+        }
         goldAmounts.innerHTML = `gold: ${gold}`;
         moneyAmounts.innerHTML = `money: ${money}`;
         goldMarketTooltip.innerHTML = `${goldPrice} gold for 1 money`
