@@ -16,8 +16,11 @@ const upgradeRfnBtn = document.querySelector("#refine-upgrade-btn")
 const rockRefineBtn = document.querySelector("#rock-refine-btn");
 const goldSellerBtn = document.querySelector("#gold-seller");
 const dissectGrsBtn = document.querySelector("#dissect-grass-btn");
+
 const grassGatherer = document.querySelector("#buy-grass-gatherer-btn");
 const rockGatherer = document.querySelector("#buy-rock-gatherer-btn");
+
+const grassPCTooltip = document.querySelector("#grassPerClickTooltip");
 
 
 // game variables
@@ -71,6 +74,7 @@ function upgradeGather() {
             grassGtrAmt ++;
             grass -= 50
             grassAmounts.innerHTML = `grass: ${grass}`;
+            grassPCTooltip.innerHTML = `${grassGtrAmt} grass per click`
             upgradeGtrBtn.innerHTML = `gather better: 100 grass`
             gatherUpgradeLvl ++  
         } 
