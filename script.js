@@ -218,7 +218,7 @@ function sellGold() {
         goldPrice ++;
         goldAmounts.innerHTML = `gold: ${gold}`;
         moneyAmounts.innerHTML = `money: ${money}`;
-        goldMarketTooltip.inner = `${goldPrice} gold for 1 money`
+        goldMarketTooltip.innerHTML = `${goldPrice} gold for 1 money`
         moneyAmounts.classList.remove("hidden");
         grassGatherer.classList.remove("hidden");
         rockGatherer.classList.remove("hidden");
